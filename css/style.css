@@ -40,6 +40,7 @@ body
 {
       font-size: 2rem;
       text-align: center;
+      padding: 0 12px;
 }
 
 #main-container
@@ -78,7 +79,6 @@ body
 
 .answer-container > div > p:nth-child(1)
 {
-      /* text-align: center; */
       height: 50px;
       background-color: var(--option-letter-background);
 }
