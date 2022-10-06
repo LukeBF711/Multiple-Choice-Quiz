@@ -1,7 +1,6 @@
 const main = () => {
      const question = document.querySelector(".question-container")
      const answers = document.querySelectorAll(".ans-box > p:nth-child(2)")
-     console.log(answers)
      
      const endPoint = `https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple`
 
