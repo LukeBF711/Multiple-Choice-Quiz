@@ -7,7 +7,10 @@
 
 :root
 {
-      --container-background-primary: #ffffff;
+      --bg-secondary: #ffffff;
+      --bg-primary: #d8e3e7;
+      --bg-ltr-choice: #126e82;
+      --font-primary: #132c33;
       --secondary-font: #fff;
       --option-letter-background: #e2703A;
 }
@@ -15,13 +18,15 @@
 body
 {
       font-family: Arial, Helvetica, sans-serif;
-      background-image: url(../img/background.jpg);
+      background-color: var(--bg-primary);
+      /* background-image: url(../img/background.jpg);
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: cover;
+      background-size: cover; */
       height: calc(100vh - 50px);
 }
 
+/* UTILITIES */
 .grid
 {
      display: grid; 
@@ -37,63 +42,68 @@ body
       grid-template-columns: 75px 1fr;
 }
 
-.question-container
-{
-      font-size: 2rem;
-      text-align: center;
-      padding: 0 12px;
-}
-
+/* HEADER */
 #main-container
 {
       margin: 50px 0 50px 0;
       width: 50%;
       margin: 50px auto;
 }
-
 #main-container > h1
 {
       text-align: center;
       font-size: 2.5rem;
-      color: var(--secondary-font);
+      color: var(--font-primary);
       margin-bottom: 50px;
 }
 
+/* QUESTION CONTAINER */
 .question-container
 {
       height: 20vh;
       margin: 0 auto;
       background-color: var(--container-background-primary);
       align-items: center;
-}
-
-
-.answer-container
-{
-      margin-top: 50px;
-      height: 20vh;
-      align-items: center;
-      background-color: var(--container-background-primary);
-      gap: 10px;
-      padding: 10px;
-}
-
-.answer-container > div > p:nth-child(1)
-{
-      height: 50px;
-      background-color: var(--option-letter-background);
-}
-
-.ans-box
-{
+      font-size: 2rem;
       text-align: center;
-      align-items: center;
+      padding: 0 12px;
 }
 
-.ans-box > p:nth-child(1)
+/* CHOICES CONTAINER */
+.choices-container
 {
-      align-content: center;
+      gap: 10px;
+      font-size: 1.2rem;
 }
+
+.choice-container
+{
+      padding: 10px 0;
+      background-color: var(--bg-secondary);
+      gap: 10px;
+}
+.choice-container:hover
+{
+      cursor: pointer;
+}
+
+.choice-txt,.choice-ltr
+{
+      display: inline;
+}
+
+.choice-ltr
+{
+      padding: 10px;
+      background-color: var(--bg-ltr-choice);
+      color: var(--secondary-font);
+}
+
+.choice-txt
+{
+      margin-left: 1rem;
+}
+
 
 
 
